@@ -150,24 +150,24 @@ def question7():
 
     # type: string
     # choices: ['C1', 'C2', 'None']
-    answers['(i) Best classifier?'] = None
+    answers['(i) Best classifier?'] = "C2"
 
     # type: explain_string
-    answers['(i) Best classifier, explain'] = None
+    answers['(i) Best classifier, explain'] = "It is very subjective and depends on the domain of the task. Since both the classifiers have the same precision and accuracy, it is imperative the task requires that the positive class is correctly classified, then the recall has to be high, in which case C2 should be chosen. However, if there is FPR should be as low as possible, then C1 should be chosen" 
 
     # type: string
     # choices: ['TPR-FPR', 'precision-recall-F1-Measure']
-    answers['(ii) appropriate metric pair'] = None
+    answers['(ii) appropriate metric pair'] = "precision-recall-F1-measure"
 
     # type: explain_string
-    answers['(ii) appropriate metric pair, explain'] = None
+    answers['(ii) appropriate metric pair, explain'] = "the precision recall and F1 score gives a better measure of the actual performance of both the classifiers, because the TPR FPR provides a trade-off score, the FPR is lower for C1, which is good but does not mean it is good performance. F1 measure rather gives a true picture of how the classifiers perform."
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
-    answers['(iii) preferred classifier?'] = None
+    answers['(iii) preferred classifier?'] = "C3"
 
     # type: explain_string
-    answers['(iii) best classifier, explain'] = None
+    answers['(iii) best classifier, explain'] = "C3 is the better classifier because of the precision, which is slightly better than the random classifier"
     return answers
 
 
@@ -202,18 +202,18 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = ['recall':
+    answers['(i) metrics'] = {'recall':0.533,'precision':0.6154,'F-measure':0.5714,'accuracy':0.88}
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = None
+    answers['(i) best metric?'] = 'accuracy'
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = None
+    answers['(i) worst metric?'] = 'recall'
 
     # type: explain_string
-    answers['(ii) Explain your choices of best and worst metrics'] = None
+    answers['(ii) Explain your choices of best and worst metrics'] = "In this specific use case, it is important to predict both the classes correctly, and hence accuracy is the best metric to gauge the performance of whether the weather is going to be sunshine or rainy. Also accuracy has given the best performance, which is a good enough metric for weather prediction. For the worst metric, Recall performs poorly, and it is not relevant to the task."
     return answers
 
 
