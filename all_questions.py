@@ -10,15 +10,15 @@ def question1():
 
     # type: float
     # Calculate the probability.
-    answers['(a)'] = None
+    answers['(a)'] = 0.0288
 
     # type: float
     # Calculate the probability.
-    answers['(b)'] = None
+    answers['(b)'] = 0.002
 
     # type: float
     # Calculate the probability.
-    answers['(c)'] = None
+    answers['(c)'] = 0.08
     return answers
 
 
@@ -116,31 +116,31 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = None
+    answers['(a) C1-TPR'] = p
 
     # type: eval_float
-    answers['(a) C2-TPR'] = None
+    answers['(a) C2-TPR'] = 2 * p
 
     # type: eval_float
-    answers['(a) C1-FPR'] = None
+    answers['(a) C1-FPR'] = p
 
     # type: eval_float
-    answers['(a) C2-FPR'] = None
+    answers['(a) C2-FPR'] = 2*p
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
     # choices: ['yes', 'no']
-    answers['(b) C2 better classifier than C1?'] = None
+    answers['(b) C2 better classifier than C1?'] = "no"
 
     # type: explain_string
-    answers['(b) C2 better classifier than C1? Explain'] = None
+    answers['(b) C2 better classifier than C1? Explain'] = "Since both the TPR and FPR are equal in both classifier, the AUROC is a straight line, meaning it performs no better than a random classifier. Thus neither is better classifier than the other."
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
-    answers['(c) Which metric?'] = None
+    answers['(c) Which metric?'] = "TPR/FPR"
 
     # type: explain_string
-    answers['(c) explain'] = None
+    answers['(c) explain'] = "The relative performance depends on the ability to discern between the two classes, and how well they distinguish each other. When comparing against the random guess line, precision recall do not give much insights, they are a measure of how well the classifier avoids false negatives. A true performance of a classifier is given by its ability to classify better than a random classifier, and hence TPR/FPR is a better measure."
     return answers
 
 
@@ -176,13 +176,13 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = 0.1
+    answers['(a) precision for C0'] = 0.1 * p
 
     # type: eval_float
-    answers['(a) recall for C0'] = 0.5
+    answers['(a) recall for C0'] = p
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = 
+    answers['(b) F-measure of C0'] = 2 * ((0.1 * p) / (0.1 + p))
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
@@ -192,7 +192,7 @@ def question8():
     # What is the range of p for which C1 is better than random?  What is
     # "?" in the expression "p > ?"
 
-    answers['p-range'] = None
+    answers['p-range'] = 0.825
     return answers
 
 
