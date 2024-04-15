@@ -1,7 +1,7 @@
 import pytest
 from all_questions import *
 import pickle
-
+import math
 
 
 #-----------------------------------------------------------
@@ -27,38 +27,38 @@ def question2():
     answers = {}
 
     # type: bool
-    answers['(a) A'] = None
+    answers['(a) A'] = True
 
     # type: bool
-    answers['(a) B'] = None
+    answers['(a) B'] = False
 
     # type: bool
-    answers['(a) C'] = None
+    answers['(a) C'] = False
 
     # type: bool
-    answers['(a) D'] = None
+    answers['(a) D'] = True
 
     # type: bool
-    answers['(b) A'] = None
+    answers['(b) A'] = True
 
     # type: False
-    answers['(b) B'] = None
+    answers['(b) B'] = False
 
     # type: bool
-    answers['(b) C'] = None
+    answers['(b) C'] = True
 
     # type: bool
-    answers['(b) D'] = None
+    answers['(b) D'] = False
 
     # type: eval_float
     # The formulas should only use the variable 'p'. The formulas should be
     # a valid Python expression. Use the functions in the math module as
     # required.
-    answers['(c) Weight update'] = None
+    answers['(c) Weight update'] = math.log((1-p)/p)/2
 
     # type: float
     # the answer should be correct to 3 significant digits
-    answers['(d) Weight influence'] = None
+    answers['(d) Weight influence'] = 1.667
     return answers
 
 
@@ -67,10 +67,10 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = None
+    answers['Agree?'] = "No"
 
     # type: explain_string
-    answers['Explain'] = None
+    answers['Explain'] = "Although the classifiers are independent, the concept of ensemble methods apply to classifiers which have some predictive power, and hence can improve their performance over multiple classifiers, iff there is an error rate involved, not if it is a purely random chance without any learning from past data."
     return answers
 
 
@@ -79,13 +79,13 @@ def question4():
     answers = {}
 
     # type: bool
-    answers['(a) e=0.5, independent'] = None
+    answers['(a) e=0.5, independent'] = False
 
     # type: bool
-    answers['(b), independent'] = None
+    answers['(b), independent'] = True
 
     # type: bool
-    answers['(c) identical'] = None
+    answers['(c) identical'] = False
     return answers
 
 
@@ -95,19 +95,19 @@ def question5():
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(a)'] = None
+    answers['(a)'] = 'iii'
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(b)'] = None
+    answers['(b)'] = 'i'
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(c)'] = None
+    answers['(c)'] = 'ii'
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(d)'] = None
+    answers['(d)'] = 'iv'
     return answers
 
 
@@ -176,17 +176,17 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = None
+    answers['(a) precision for C0'] = 0.1
 
     # type: eval_float
-    answers['(a) recall for C0'] = None
+    answers['(a) recall for C0'] = 0.5
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = None
+    answers['(b) F-measure of C0'] = 
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = None
+    answers['C1 better than random?'] =  "yes"
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
@@ -202,7 +202,7 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = None
+    answers['(i) metrics'] = ['recall':
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
@@ -223,21 +223,21 @@ def question10():
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(a) better test based on F-measure?'] = None
+    answers['(a) better test based on F-measure?'] = 'T1'
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(b) better test based on TPR/FPR?'] = None
+    answers['(b) better test based on TPR/FPR?'] = 'T1'
 
     # type: string
     # choices: ['F1', 'TPR/FPR']
-    answers['(c) Which evaluation measure to use between the two tests?'] = None
+    answers['(c) Which evaluation measure to use between the two tests?'] = 'TPR/FPR'
 
     # type: explain_string
-    answers['(c) Which evaluation measure? Explain'] = None
+    answers['(c) Which evaluation measure? Explain'] = "I would prefer TPR/FPR over F1 score, because TPR/FPR is a better metric to identify patients who are or are not suffering from cancer. Our goal is not to get a better precision, but to get a better recall and also abetter specifity. So the trade-off is more between sensitivity and specificity, rather than sensitivity and precision. Thus, TPR/FPR is a better measure"
 
     # type: explain_string
-    answers['(d) Example scenario where you would reverse choise in (c)'] = None
+    answers['(d) Example scenario where you would reverse choise in (c)'] = "A case where F1 measure is important is where precision is important. That is the cost of a False positive is high. A situatuon where avoiding False positive is important, is invasive treatments for cancer, where it is important for the algorithm or model to detect where exactly the tumour lies, because if it detects a wrong area, it could end up being fatal."
     return answers
 #-----------------------------------------------------------
 if __name__ == '__main__':
