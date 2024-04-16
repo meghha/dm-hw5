@@ -58,7 +58,7 @@ def question2():
 
     # type: float
     # the answer should be correct to 3 significant digits
-    answers['(d) Weight influence'] = 1.667
+    answers['(d) Weight influence'] = 1.5275
     return answers
 
 
@@ -192,7 +192,7 @@ def question8():
     # What is the range of p for which C1 is better than random?  What is
     # "?" in the expression "p > ?"
 
-    answers['p-range'] = 0.8250
+    answers['p-range'] = 0.3
     return answers
 
 
