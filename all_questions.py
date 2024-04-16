@@ -202,7 +202,11 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = {'recall':0.533,'precision':0.6154,'F-measure':0.5714,'accuracy':0.88}
+    answers['(i) metrics'] = {
+        'recall':0.5330,
+        'precision':0.6154,
+        'F-measure':0.5714,
+        'accuracy':0.8800}
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
