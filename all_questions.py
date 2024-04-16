@@ -125,7 +125,7 @@ def question6():
     answers['(a) C1-FPR'] = p
 
     # type: eval_float
-    answers['(a) C2-FPR'] = 2*p
+    answers['(a) C2-FPR'] = 2 * p
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
